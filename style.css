@@ -7,17 +7,21 @@ html {
 body {
   background-color: #e8eddf;
 }
-.linkStyle:hover {
+a:focus {
+  outline: none;
+}
+
+a.linkStyle:hover {
   font-size: 1rem;
   background: -webkit-linear-gradient(right, #b2c963, #32928f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
 }
-.linkStyle:focus {
+a.linkStyle:focus {
   outline: none;
 }
-.linkStyle {
+a.linkStyle {
   font-size: 1rem;
   background: -webkit-linear-gradient(#e8eddf, #e8eddf);
   -webkit-background-clip: text;
@@ -89,7 +93,6 @@ body {
 } */
 /* Mini Logo */
 #nav_logo_mini {
-  background-color: #242423;
 }
 /*Showtests*/
 .category {

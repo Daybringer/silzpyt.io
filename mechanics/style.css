@@ -8,6 +8,9 @@ body {
   background-color: #e8eddf;
   padding-top: 50px;
 }
+a:focus {
+  outline: none;
+}
 .linkStyle:hover {
   font-size: 1rem;
   background: -webkit-linear-gradient(right, #b2c963, #32928f);
@@ -85,9 +88,6 @@ body {
 } */
 /* Mini Logo */
 #nav_logo_mini {
-  background-color: #212529;
-  width: 100%;
-  position: relative;
 }
 /*Showtests*/
 .category {
