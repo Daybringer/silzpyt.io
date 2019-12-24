@@ -27,14 +27,17 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-
-    <link href="./style.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="../style.css" rel="stylesheet" />
   </head>
-  <body>
+
+  <body class="navbar_fixed">
+    <!-- Navbar -->
     <nav
       class="navbar navbar-expand-lg fixed-top"
       style="background-color:#212529; "
     >
+      <!-- LOGO and navbar content-->
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
           <svg
@@ -221,7 +224,7 @@
                 aria-label="Silzpyt.io"
                 transform="scale(1.0013983,0.99860365)"
                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.41669464px;line-height:1.25;font-family:Molle;-inkscape-font-specification:Molle;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient837);fill-opacity:1;stroke:none;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                id="silzpytio"
+                id="silzpytio_mini"
               >
                 <path
                   d="m 91.348342,137.06612 q 3.107753,0 4.444421,1.0025 1.336668,1.00251 1.336668,2.43942 0,1.4035 -0.969085,2.63992 -0.935667,1.203 -2.639918,1.203 -1.704252,0 -1.704252,-1.43691 0,-0.13367 0.06683,-0.53467 0.90225,0 1.570584,-0.70175 0.668334,-0.70175 0.668334,-1.53717 0,-0.83542 -0.802001,-1.37008 -0.802,-0.53467 -1.938168,-0.53467 -1.938168,0 -3.208003,1.16958 -1.269834,1.16959 -1.269834,2.74017 0,0.83542 0.601501,1.83792 0.6015,1.0025 1.136167,1.604 0.568084,0.56808 1.804502,1.73767 1.269834,1.13617 1.503751,1.37008 2.539669,2.53967 2.539669,5.54718 0,2.97408 -2.706753,5.213 -2.706752,2.2055 -6.482838,2.2055 -3.074336,0 -4.979088,-1.0025 -1.871335,-1.0025 -1.871335,-3.14117 0,-1.16958 0.768584,-2.13867 0.768584,-0.96908 2.172085,-0.96908 1.436918,0 1.938169,1.0025 -1.169585,0.93567 -1.169585,2.27233 0,1.30326 0.868834,2.03842 0.902251,0.70175 2.339169,0.70175 2.005002,0 3.508753,-1.43691 1.537168,-1.43692 1.537168,-3.60901 0,-2.2055 -2.873836,-5.24642 -0.03342,-0.0668 -1.169584,-1.23642 -1.136168,-1.203 -1.904752,-2.43941 -0.735167,-1.23642 -0.735167,-2.94067 0,-2.90726 2.272335,-4.67834 2.272335,-1.77109 5.346671,-1.77109 z"
@@ -315,7 +318,7 @@
                   class="NO1"
                 />
               </g>
-              <g id="right_strokes" inkscape:label="g849">
+              <g id="right_strokes_mini" inkscape:label="g849">
                 <rect
                   transform="matrix(0.86092799,-0.50872683,0.50927042,0.86060655,0,0)"
                   style="opacity:1;fill:url(#linearGradient880);fill-opacity:1;fill-rule:evenodd;stroke:#31386d;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
@@ -453,18 +456,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Foo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Placeholder</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bar</a>
+              <a class="nav-link linkStyle" href="#">O projektu</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <!-- Navbar wave -->
     <div>
       <svg
         xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -526,24 +524,96 @@
         </g>
       </svg>
     </div>
-    <div class="container-fluid">
+    <!-- Description -->
+    <div class="container">
+      <h1 class="text-center mt-5 mb-4">Kanónová koule</h1>
+      <ul>
+        <li class="text-center">
+          Kanónová koule je krásným příkladem z oblasti klasické fyziky. Dobře
+          simuluje konání gravitace a parabolickou křivku.
+        </li>
+      </ul>
+    </div>
+    <!-- Clearfix -->
+    <hr class="clearfix" style="width:80%" />
+    <!-- Game options -->
+    <div class="container">
       <div class="row">
-        <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid" src="../test.jpg" />
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"
+                >Tíhová síla</span
+              >
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="9.81"
+              aria-label="Gravitation"
+              aria-describedby="basic-addon1"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text" id="ZMENIT">m/s<sup>2</sup></span>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Váha koule</span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="1"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text" id="ZMENIT">kg</span>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid" src="../test.jpg" />
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Gravitace</span>
+            </div>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider_options"
+              id="myRange"
+              aria-label="some shit"
+              aria-describedby="some shit for blind"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid" src="../test.jpg" />
-        </div>
-        <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid" src="../test.jpg" />
-        </div>
+        <button type="button" class="block buttonStyle">Uložit hodnoty</button>
       </div>
     </div>
+    <!-- Game -->
+    <div class="container-fluid">
+      <div class="col-md-12 col-sm-12 category">
+        <img class="img-fluid" src="../test.jpg" />
+      </div>
+    </div>
+    <!-- Tags -->
+    <div class="container-fluid"></div>
+    <!-- Footer wave -->
     <section class="wavebackground">
       <svg
         xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -612,7 +682,7 @@
         </g>
       </svg>
     </section>
-
+    <!-- Footer -->
     <footer class="page-footer font-small blue">
       <div class="footer-copyright text-center py-3">
         © 2019-2020 Copyright:
