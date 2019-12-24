@@ -6,6 +6,7 @@ html {
 }
 body {
   background-color: #e8eddf;
+  padding-top: 50px;
 }
 .linkStyle:hover {
   font-size: 1rem;
@@ -52,11 +53,6 @@ body {
   width: 100%;
   height: auto;
 }
-#navbar_svg {
-  background-color: #212529;
-  width: 100%;
-  position: relative;
-}
 .navlogo {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -89,7 +85,9 @@ body {
 } */
 /* Mini Logo */
 #nav_logo_mini {
-  background-color: #242423;
+  background-color: #212529;
+  width: 100%;
+  position: relative;
 }
 /*Showtests*/
 .category {

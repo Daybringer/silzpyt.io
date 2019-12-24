@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Silzpytio - fyzika jinak</title>
+    <title>Silzpytio - Mechanika</title>
     <!-- Bootstrap CSS and JS -->
     <link
       rel="stylesheet"
@@ -28,60 +28,17 @@
       crossorigin="anonymous"
     ></script>
 
-    <link href="style.css" rel="stylesheet" />
-    <script>
-      "use strict";
-      document.addEventListener("DOMContentLoaded", event => {
-        let animationState = 0;
-        document
-          .getElementById("navlogo")
-          .addEventListener("click", animateLogo);
-
-        function animateLogo() {
-          if (animationState === 0) {
-            let style = document.createElement("style");
-            style.innerHTML = `
-                     #silzpytio {
-        -webkit-transition: all 0.3s ease-in;
-        -moz-transition: all 0.3s ease-in;
-        -o-transition: all 0.3s ease-in;
-        transition: all 0.3s ease-in;
-        transform: translate(0px, 0px);
-      }
-      #right_strokes {
-  opacity: 1 !important;
-}`;
-            document.head.appendChild(style);
-            animationState = 1;
-            console.log("on");
-          } else {
-            let style = document.createElement("style");
-            style.innerHTML = `
-            #silzpytio {
-  -webkit-transition: all 0.75s ease-in;
-  -moz-transition: all 0.75s ease-in;
-  -o-transition: all 0.75s ease-in;
-  transition: all 0.75s ease-in;
-  transform: translate(-20px, 0px);
-}
-#right_strokes {
-  opacity: 0 !important;
-}
-`;
-            document.head.appendChild(style);
-            document.getElementById("wavebackground").style.color = "blue";
-            animationState = 0;
-            console.log("off");
-          }
-        }
-      });
-    </script>
+    <link href="./style.css" rel="stylesheet" />
   </head>
-
   <body>
-    <div id="navlogo" class="fluid-container navlogo">
-      <section class="wavebackground">
-        <svg
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="background-color:#212529; "
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          Silzpyt.io
+          <!-- <svg
           xmlns:dc="http://purl.org/dc/elements/1.1/"
           xmlns:cc="http://creativecommons.org/ns#"
           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -92,7 +49,7 @@
           xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
           viewBox="0 0 218.52306 43.200157"
           version="1.1"
-          id="nav_logo"
+          id="nav_logo_mini"
           sodipodi:docname="logo_lens3.svg"
           inkscape:version="0.92.4 5da689c313, 2019-01-14"
         >
@@ -392,99 +349,92 @@
               />
             </g>
           </g>
-        </svg>
-        <svg
-          xmlns:dc="http://purl.org/dc/elements/1.1/"
-          xmlns:cc="http://creativecommons.org/ns#"
-          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-          xmlns:svg="http://www.w3.org/2000/svg"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-          viewBox="0 0 370.41668 79.374999"
-          version="1.1"
-          id="curve"
-          inkscape:version="0.92.4 5da689c313, 2019-01-14"
-          sodipodi:docname="wave.svg"
+        </svg> -->
+        </a>
+      </div>
+    </nav>
+    <div class="fluid-box">
+      <svg
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:svg="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        viewBox="0 0 370.41666 26.458334"
+        version="1.1"
+        id="svg8"
+        inkscape:version="0.92.4 5da689c313, 2019-01-14"
+        sodipodi:docname="navbar.svg"
+      >
+        <defs id="defs2" />
+        <sodipodi:namedview
+          id="base"
+          pagecolor="#ffffff"
+          bordercolor="#666666"
+          borderopacity="1.0"
+          inkscape:pageopacity="0.0"
+          inkscape:pageshadow="2"
+          inkscape:zoom="1.2955601"
+          inkscape:cx="1230.3241"
+          inkscape:cy="1.8247995"
+          inkscape:document-units="mm"
+          inkscape:current-layer="layer1"
+          showgrid="false"
+          units="px"
+          inkscape:window-width="1366"
+          inkscape:window-height="713"
+          inkscape:window-x="0"
+          inkscape:window-y="0"
+          inkscape:window-maximized="1"
+        />
+        <metadata id="metadata5">
+          <rdf:RDF>
+            <cc:Work rdf:about="">
+              <dc:format>image/svg+xml</dc:format>
+              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+              <dc:title></dc:title>
+            </cc:Work>
+          </rdf:RDF>
+        </metadata>
+        <g
+          inkscape:label="Layer 1"
+          inkscape:groupmode="layer"
+          id="layer1"
+          transform="translate(0,-270.54165)"
         >
-          <defs id="defs815">
-            <inkscape:path-effect
-              effect="spiro"
-              id="path-effect1368"
-              is_visible="true"
-            />
-          </defs>
-          <sodipodi:namedview
-            id="base"
-            pagecolor="#ffffff"
-            bordercolor="#666666"
-            borderopacity="1.0"
-            inkscape:pageopacity="0.0"
-            inkscape:pageshadow="2"
-            inkscape:zoom="0.5"
-            inkscape:cx="460.32507"
-            inkscape:cy="-127.99274"
-            inkscape:document-units="mm"
-            inkscape:current-layer="layer1"
-            showgrid="false"
-            units="px"
-            inkscape:snap-global="false"
-            inkscape:window-width="1920"
-            inkscape:window-height="1025"
-            inkscape:window-x="0"
-            inkscape:window-y="0"
-            inkscape:window-maximized="1"
+          <path
+            style="fill:#212529;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="m -2.1531061,298.00836 c 36.9958271,-13.48198 22.8805441,3.80991 53.8842751,-6.98817 27.785235,-14.99102 18.380276,4.55069 46.354562,-7.2692 27.478069,-17.35866 55.493049,3.0078 98.438499,3.229 41.60414,0.2143 66.35833,-15.54476 88.51339,-8.49045 50.65883,14.68787 54.74769,-0.22456 85.974,10.88486 0.27562,-7.79875 0.0799,-9.83256 -0.016,-12.96763 l 0.052,-6.03256 -373.3461681,-0.11942 z"
+            id="path815"
+            inkscape:connector-curvature="0"
+            sodipodi:nodetypes="cccscccccc"
           />
-          <metadata id="metadata818">
-            <rdf:RDF>
-              <cc:Work rdf:about="">
-                <dc:format>image/svg+xml</dc:format>
-                <dc:type
-                  rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-                />
-                <dc:title></dc:title>
-              </cc:Work>
-            </rdf:RDF>
-          </metadata>
-          <g
-            inkscape:label="Layer 1"
-            inkscape:groupmode="layer"
-            id="random"
-            transform="translate(0,-217.625)"
-          >
-            <path
-              style="fill:#2ecc79;fill-opacity:1;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-              d="m 29.505349,277.25352 c 29.809292,-14.1949 52.521133,-16.56072 70.264762,-8.99011 19.331149,8.24795 71.137709,23.10179 107.644649,-5.91455 22.90002,-20.50633 53.05346,-37.65492 83.04017,-13.24857 26.93746,21.92455 22.11145,26.93724 50.97443,11.79601 6.34046,-3.32614 12.33825,-5.15223 16.34154,-6.01329 3.00302,-0.64592 10.77102,-0.35615 12.72619,-0.14072 1.98001,0.21817 0.50392,43.30354 0.32211,43.30333 L 0.08609592,297.63185 c 0,0 -0.39003627,-6.18344 29.41925308,-20.37834 z"
-              id="path1372"
-              inkscape:connector-curvature="0"
-              sodipodi:nodetypes="cscssssscsc"
-            />
-          </g>
-        </svg>
-      </section>
+        </g>
+      </svg>
     </div>
-
-    <div class="fluid-container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid" src="test.jpg" />
+          <img class="img-fluid" src="../test.jpg" />
         </div>
         <div class="col-md-6 col-sm-12 category">
           <a href="./mechanics/mechanics.html"
-            ><img class="img-fluid" src="test.jpg"
+            ><img class="img-fluid" src="../test.jpg"
           /></a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid" src="test.jpg" />
+          <img class="img-fluid" src="../test.jpg" />
         </div>
         <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid" src="test.jpg" />
+          <img class="img-fluid" src="../test.jpg" />
         </div>
       </div>
     </div>
-    <section id="wavebackground" class="wavebackground">
+    <section class="wavebackground">
       <svg
         xmlns:dc="http://purl.org/dc/elements/1.1/"
         xmlns:cc="http://creativecommons.org/ns#"
