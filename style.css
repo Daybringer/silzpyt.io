@@ -197,6 +197,10 @@ button.block {
           transform: translate(-20px, 0px);
 }
 
+#phaser_game {
+  height: 100vh;
+}
+
 .page-footer {
   background-color: #242423;
   color: #e8eddf;
