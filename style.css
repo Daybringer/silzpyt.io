@@ -1,25 +1,32 @@
-/* Overall settings */
+.category {
+  text-align: center;
+  padding: 2rem;
+}
+
 html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-body.navbar_fixed {
-  padding-top: 50px;
-}
+
 body {
   background-color: #e8eddf;
 }
-a:focus {
-  outline: none;
+
+body.navbar_fixed {
+  padding-top: 50px;
 }
-.navbar-nav li {
-  padding-right: 30px;
+
+a.mainStyle {
+  font-size: 1rem;
+  background: #e8eddf;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.nav-link {
-  font-size: 1.1em !important;
-}
-.linkStyle:hover {
+
+a.mainStyle:hover {
   font-size: 1rem;
   background: -webkit-linear-gradient(right, #b2c963, #32928f);
   -webkit-background-clip: text;
@@ -27,23 +34,16 @@ a:focus {
   -webkit-text-fill-color: transparent;
   text-decoration: none;
 }
-.linkStyle:focus {
+
+a.mainStyle:focus {
   outline: none;
 }
-.linkStyle {
-  font-size: 1rem;
-  background: -webkit-linear-gradient(#e8eddf, #e8eddf);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+a:focus {
+  outline: none;
 }
 
-button.block {
-  width: 100%;
-  height: auto;
-}
-
-.buttonStyle {
+button.mainStyle {
   background: -webkit-linear-gradient(right, #b2c963, #32928f);
   color: #242423;
   border-radius: 50px;
@@ -51,46 +51,74 @@ button.block {
   font-weight: 500;
   border: #242423;
 }
-.buttonStyle:focus {
+
+button.mainStyle:focus {
   outline: none;
 }
 
-/* game_options */
+button.block {
+  width: 100%;
+  height: auto;
+}
+
+.navbar-nav li {
+  padding-right: 30px;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+}
+
 .slider_options {
-  -webkit-appearance: none; /* Override default CSS styles */
-  appearance: none;
-  width: auto; /* Full-width */
-  height: auto; /* Specified height */
-  background: #d3d3d3; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  -moz-appearance: none;
+       appearance: none;
+  width: auto;
+  /* Full-width */
+  height: auto;
+  /* Specified height */
+  background: #d3d3d3;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s;
+  /* 0.2 seconds transition on hover */
+  -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
+
 .slider_options:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+  opacity: 1;
+  /* Fully shown on mouse-over */
 }
 
 .slider_options::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none;
+  /* Override default look */
   appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: -webkit-linear-gradient(
-    right,
-    #b2c963,
-    #32928f
-  ); /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: -webkit-linear-gradient(right, #b2c963, #32928f);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
 }
 
 .slider_options::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
   background: -webkit-linear-gradient(right, #b2c963, #32928f);
-  cursor: pointer; /* Cursor on hover */
+  cursor: pointer;
+  /* Cursor on hover */
 }
-/* wave header */
+
 .wavebackground {
   margin: 0;
   padding: 0;
@@ -99,89 +127,81 @@ button.block {
   width: 100%;
   height: auto;
 }
+
 #curve {
   position: relative;
   width: 100%;
 }
+
 #curve path {
   fill: #e8eddf !important;
   stroke: none !important;
 }
+
 #curve_bottom {
   width: 100%;
   position: relative;
 }
+
 #curve_bottom path {
   fill: #e8eddf !important;
 }
+
 #nav_logo {
   padding: 2rem 0rem 0rem 2rem;
   width: 100%;
   height: auto;
 }
+
 .navlogo {
   padding-top: 0px;
   padding-bottom: 0px;
   text-align: center;
 }
 
-/* PSEUDO ANIMATIONS ON LOGO */
 #right_strokes {
   -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  opacity: 0 !important;
+  opacity: 0;
 }
 
-#silzpytio {
+#silzpytio,
+#sylzpytio_mini {
   -webkit-transition: all 0.75s ease-in;
-  -moz-transition: all 0.75s ease-in;
-  -o-transition: all 0.75s ease-in;
   transition: all 0.75s ease-in;
-  transform: translate(-20px, 0px);
+  -webkit-transform: translate(-20px, 0px);
+          transform: translate(-20px, 0px);
 }
 
-/* MINI LOGO - navbar*/
 #nav_logo_mini:hover #silzpytio_mini {
   -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
+
 #nav_logo_mini:hover #right_strokes_mini {
   opacity: 1;
 }
+
 #right_strokes_mini {
   -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   opacity: 0;
 }
 
 #silzpytio_mini {
   -webkit-transition: all 0.75s ease-in;
-  -moz-transition: all 0.75s ease-in;
-  -o-transition: all 0.75s ease-in;
   transition: all 0.75s ease-in;
-  transform: translate(-20px, 0px);
+  -webkit-transform: translate(-20px, 0px);
+          transform: translate(-20px, 0px);
 }
 
-/*Showtests*/
-.category {
-  padding: 2rem;
-  text-align: center;
-}
-
-/* Footer */
 .page-footer {
   background-color: #242423;
   color: #e8eddf;
 }
 
-/* BOOTSTRAP FIX */
 .row {
   margin-right: 0px;
   margin-left: 0px;
@@ -193,3 +213,4 @@ button.block {
     display: none;
   }
 }
+/*# sourceMappingURL=style.css.map */

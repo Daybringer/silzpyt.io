@@ -456,7 +456,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link linkStyle" href="#">O projektu</a>
+              <a class="nav-link mainStyle" href="#">O projektu</a>
             </li>
           </ul>
         </div>
@@ -576,7 +576,9 @@
         <div class="col-md-6">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Gravitace</span>
+              <span class="input-group-text" id="basic-addon1"
+                >Úsťová rychlost při 1kg kouli</span
+              >
             </div>
             <input
               type="range"
@@ -588,26 +590,42 @@
               aria-label="some shit"
               aria-describedby="some shit for blind"
             />
+            <span class="input-group-text" id="basic-addon1">m/s</span>
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">@</span>
+              <span class="input-group-text" id="basic-addon1"
+                >Hustota vzduchu</span
+              >
             </div>
             <input
               type="text"
               class="form-control"
-              placeholder="Username"
+              placeholder="1.2"
               aria-label="Username"
               aria-describedby="basic-addon1"
             />
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon1"
+                >kg/m<sup>2</sup></span
+              >
+            </div>
           </div>
         </div>
-        <button type="button" class="block buttonStyle">Uložit hodnoty</button>
+        <button
+          type="button"
+          onclick="alert('It works')"
+          class="block mainStyle"
+        >
+          Uložit hodnoty
+        </button>
       </div>
     </div>
     <!-- Game -->
     <div class="container-fluid">
-      <div class="col-md-12 col-sm-12 category">
+      <div
+        class="col-md-12 col-sm-12 category"
+      >
         <img class="img-fluid" src="../test.jpg" />
       </div>
     </div>
@@ -686,7 +704,7 @@
     <footer class="page-footer font-small blue">
       <div class="footer-copyright text-center py-3">
         © 2019-2020 Copyright:
-        <a class="linkStyle" href="https://daybringer.github.io/">
+        <a class="mainStyle" href="https://daybringer.github.io/">
           Michal Vaňata</a
         >
       </div>

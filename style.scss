@@ -1,0 +1,224 @@
+$gradient_hell: #b2c963;
+$gradient_dunkel: #32928f;
+$pearl_white: #e8eddf;
+$coal_black: #242423;
+//
+// JUNK
+.category {
+  text-align: center;
+  padding: 2rem;
+}
+//
+// Basic tweaks
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $pearl_white;
+
+  &.navbar_fixed {
+    padding-top: 50px;
+  }
+}
+//
+// Links
+a {
+  &.mainStyle {
+    font-size: 1rem;
+    background: $pearl_white;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:hover {
+      font-size: 1rem;
+      background: -webkit-linear-gradient(
+        right,
+        $gradient_hell,
+        $gradient_dunkel
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+//
+// Buttons
+button {
+  &.mainStyle {
+    background: -webkit-linear-gradient(
+      right,
+      $gradient_hell,
+      $gradient_dunkel
+    );
+    color: $coal_black;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border: $coal_black;
+    &:focus {
+      outline: none;
+    }
+  }
+  &.block {
+    width: 100%;
+    height: auto;
+  }
+}
+//
+// Navbar
+.navbar-nav li {
+  padding-right: 30px;
+}
+.nav-link {
+  font-size: 1.1em !important;
+}
+//
+// Slider tweak (STOLEN)
+.slider_options {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: auto; /* Full-width */
+  height: auto; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+.slider_options:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider_options::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: -webkit-linear-gradient(
+    right,
+    $gradient_hell,
+    $gradient_dunkel
+  ); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider_options::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: -webkit-linear-gradient(right, $gradient_hell, $gradient_dunkel);
+  cursor: pointer; /* Cursor on hover */
+}
+//
+// SVG
+// Footer wave
+.wavebackground {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: $coal_black;
+  width: 100%;
+  height: auto;
+}
+// Navbar wave
+#curve {
+  position: relative;
+  width: 100%;
+}
+#curve path {
+  fill: $pearl_white !important;
+  stroke: none !important;
+}
+#curve_bottom {
+  width: 100%;
+  position: relative;
+}
+#curve_bottom path {
+  fill: $pearl_white !important;
+}
+// Main page logo
+#nav_logo {
+  padding: 2rem 0rem 0rem 2rem;
+  width: 100%;
+  height: auto;
+}
+.navlogo {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+
+#right_strokes {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#silzpytio,
+#sylzpytio_mini {
+  -webkit-transition: all 0.75s ease-in;
+  -moz-transition: all 0.75s ease-in;
+  -o-transition: all 0.75s ease-in;
+  transition: all 0.75s ease-in;
+  transform: translate(-20px, 0px);
+}
+
+// Navbar mini logo
+#nav_logo_mini:hover #silzpytio_mini {
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  transform: translate(0px, 0px);
+}
+#nav_logo_mini:hover #right_strokes_mini {
+  opacity: 1;
+}
+#right_strokes_mini {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#silzpytio_mini {
+  -webkit-transition: all 0.75s ease-in;
+  -moz-transition: all 0.75s ease-in;
+  -o-transition: all 0.75s ease-in;
+  transition: all 0.75s ease-in;
+  transform: translate(-20px, 0px);
+}
+//
+// Footer
+.page-footer {
+  background-color: $coal_black;
+  color: $pearl_white;
+}
+//
+// Bootstrap fix
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1100px) {
+  #navbar_wave_small {
+    display: none;
+  }
+}
