@@ -104,7 +104,6 @@ function create() {
     game_height - 0.25 * game_height,
     "canon"
   );
-  canon.setAngle(10);
   //
   // Canon ball
   canon_ball = this.physics.add.sprite(game_width, game_height, "canon_ball");
