@@ -11,7 +11,7 @@ var config = {
   physics: {
     default: "arcade",
     arcade: {
-      gravity: { y: 300 },
+      gravity: { y: 200 },
       debug: false
     }
   },
@@ -19,8 +19,7 @@ var config = {
     preload: preload,
     create: create,
     update: update
-  },
-  fps: 30
+  }
 };
 
 let block;
@@ -91,37 +90,42 @@ function create() {
     game_height - 0.25 * game_height,
     "canon"
   );
+  canon.setAngle(10);
   //
   // Canon ball
+  canon_ball = this.physics.add.sprite(game_width, game_height, "canon_ball");
   //
   //
   canon.body.setAllowGravity(false);
   this.physics.add.collider(blocks, platform);
   this.physics.add.collider(blocks, blocks);
+  this.physics.add.collider(blocks, canon_ball);
+  this.physics.add.collider(canon_ball, platform);
+  this.physics.add.collider(canon_ball, canon_ball);
 
   cursors = this.input.keyboard.createCursorKeys();
   spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 }
 
 function update() {
-  // if (Phaser.Input.Keyboard.JustDown(spacebar)) {
-  //   pointer => {
-  //     canon_ball.create(pointer.x, pointer.y, "canon_ball").setScale(1);
-  //   };
-  // }
+  if (Phaser.Input.Keyboard.JustDown(spacebar)) {
+    alert("lol");
+  }
 
   this.input.on(
     "pointerdown",
     function(pointer) {
-      canon_ball = this.physics.add.sprite(
-        game_width - 0.86 * game_width,
-        game_height - 0.25 * game_height,
-        "canon_ball"
+      let angle = Phaser.Math.Angle.Between(
+        canon.x,
+        canon.y,
+        pointer.x,
+        pointer.y
       );
+      canon.setRotation(angle);
+      canon_ball.x = game_width - 0.86 * game_width;
+      canon_ball.y = game_height - 0.25 * game_height;
+
       this.physics.moveTo(canon_ball, pointer.x, pointer.y, 500);
-      this.physics.add.collider(blocks, canon_ball);
-      this.physics.add.collider(canon_ball, platform);
-      this.physics.add.collider(canon_ball, canon_ball);
     },
     this
   );
