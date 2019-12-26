@@ -1,12 +1,7 @@
 start_velocity = 400;
-base_gravity = 200;
+base_gravity = 250;
 canon_ball_mass = 1;
 air_density = 0;
-
-function getValues() {
-  let base = document.getElementById("start_velocity").value;
-  start_velocity = base;
-}
 
 // let game_height = window.innerHeight * window.devicePixelRatio - 50;
 let game_height = document.getElementById("phaser_game").offsetHeight;
@@ -58,25 +53,27 @@ function create() {
     .create(0, game_height - 32, "platform")
     .setScale(8, 2)
     .refreshBody();
+  base_platform.setVelocityX(1000);
+  base_platform.setVelocityY(1000);
   // base_platform.setFrictionX(100);
   //
   //Blocks
   // 34x34 size >> 34x126
   blocks = this.physics.add.group();
-  blocks
-    .create(
-      game_width - 0.2 * game_width,
-      game_height - 0.3 * game_height,
-      "block"
-    )
-    .setScale(1, 3);
-  blocks
-    .create(
-      game_width - 0.2 * game_width - 38,
-      game_height - 0.3 * game_height,
-      "block"
-    )
-    .setScale(1, 3);
+  // blocks
+  //   .create(
+  //     game_width - 0.2 * game_width,
+  //     game_height - 0.3 * game_height,
+  //     "block"
+  //   )
+  //   .setScale(1, 3);
+  // blocks
+  //   .create(
+  //     game_width - 0.2 * game_width - 38,
+  //     game_height - 0.3 * game_height,
+  //     "block"
+  //   )
+  //   .setScale(1, 3);
   blocks
     .create(
       game_width - 0.2 * game_width - 18,
@@ -86,8 +83,9 @@ function create() {
     .setScale(1, 3);
   blocks.getChildren().forEach(function(block) {
     block.setMass(50);
-    block.setBounce(0);
+    block.setBounce(0.5);
     block.setFrictionX(100);
+    block.setMaxVelocity(10, 2000);
   });
   //
   // Canon stand
@@ -125,12 +123,23 @@ function create() {
   spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 }
 
+function getValues() {
+  let base = document.getElementById("start_velocity").value;
+  start_velocity = base;
+
+  let mass = document.getElementById("ball_mass").value;
+  let grav = document.getElementById("gravity").value;
+
+  let calc_grav = mass * grav * 51;
+  canon_ball.setGravity(0, calc_grav / 2);
+}
+
 function update() {
   button = document.getElementById("submit_button");
   button.addEventListener("click", function() {
     getValues();
-    this.scene.restart();
   });
+
   if (Phaser.Input.Keyboard.JustDown(spacebar)) {
     alert("lol");
   }
@@ -147,7 +156,7 @@ function update() {
       canon.setRotation(angle);
       canon_ball.x = game_width - 0.86 * game_width;
       canon_ball.y = game_height - 0.25 * game_height;
-
+      canon_ball.setAngularVelocity(1);
       this.physics.moveTo(canon_ball, pointer.x, pointer.y, start_velocity);
     },
     this

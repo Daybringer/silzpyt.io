@@ -546,14 +546,17 @@
         <div class="col-md-6">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="gravity">Tíhová síla</span>
+              <span class="input-group-text">Tíhová síla</span>
             </div>
             <input
-              type="text"
+              type="number"
               class="form-control"
               value="9.81"
               aria-label="Gravitation"
               aria-describedby="basic-addon1"
+              id="gravity"
+              min="0"
+              max="100"
             />
             <div class="input-group-append">
               <span class="input-group-text" id="ZMENIT">m/s<sup>2</sup></span>
@@ -561,14 +564,15 @@
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="ball_mass">Váha koule</span>
+              <span class="input-group-text">Váha koule</span>
             </div>
             <input
-              type="text"
+              type="number"
               class="form-control"
               value="1"
               aria-label="Username"
               aria-describedby="basic-addon1"
+              id="ball_mass"
             />
             <div class="input-group-append">
               <span class="input-group-text" id="ZMENIT">kg</span>
@@ -609,16 +613,12 @@
             />
             <div class="input-group-append">
               <span class="input-group-text" id="basic-addon1"
-                >kg/m<sup>2</sup></span
+                >kg/m<sup>3</sup></span
               >
             </div>
           </div>
         </div>
-        <button
-          type="button"
-          class="block mainStyle"
-          id="submit_button"
-        >
+        <button type="button" class="block mainStyle" id="submit_button">
           Uložit hodnoty
         </button>
       </div>
