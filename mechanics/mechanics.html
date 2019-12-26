@@ -538,7 +538,7 @@
         </li>
       </ul>
     </div>
-    <!-- Clearfix -->
+    <!-- HR -->
     <hr class="clearfix" style="width:80%" />
     <!-- Game options -->
     <div class="container">
@@ -546,14 +546,12 @@
         <div class="col-md-6">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
-                >Tíhová síla</span
-              >
+              <span class="input-group-text" id="gravity">Tíhová síla</span>
             </div>
             <input
               type="text"
               class="form-control"
-              placeholder="9.81"
+              value="9.81"
               aria-label="Gravitation"
               aria-describedby="basic-addon1"
             />
@@ -563,12 +561,12 @@
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Váha koule</span>
+              <span class="input-group-text" id="ball_mass">Váha koule</span>
             </div>
             <input
               type="text"
               class="form-control"
-              placeholder="1"
+              value="1"
               aria-label="Username"
               aria-describedby="basic-addon1"
             />
@@ -580,17 +578,17 @@
         <div class="col-md-6">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
+              <span class="input-group-text"
                 >Úsťová rychlost při 1kg kouli</span
               >
             </div>
             <input
               type="range"
               min="1"
-              max="100"
-              value="50"
+              max="1000"
+              value="500"
               class="slider_options"
-              id="myRange"
+              id="start_velocity"
               aria-label="some shit"
               aria-describedby="some shit for blind"
             />
@@ -598,14 +596,14 @@
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
+              <span class="input-group-text" id="air_density"
                 >Hustota vzduchu</span
               >
             </div>
             <input
               type="text"
               class="form-control"
-              placeholder="1.2"
+              value="1.2"
               aria-label="Username"
               aria-describedby="basic-addon1"
             />
@@ -618,8 +616,8 @@
         </div>
         <button
           type="button"
-          onclick="alert('It works')"
           class="block mainStyle"
+          id="submit_button"
         >
           Uložit hodnoty
         </button>

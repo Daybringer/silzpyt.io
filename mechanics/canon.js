@@ -1,3 +1,13 @@
+start_velocity = 400;
+base_gravity = 200;
+canon_ball_mass = 1;
+air_density = 0;
+
+function getValues() {
+  let base = document.getElementById("start_velocity").value;
+  start_velocity = base;
+}
+
 // let game_height = window.innerHeight * window.devicePixelRatio - 50;
 let game_height = document.getElementById("phaser_game").offsetHeight;
 let game_width = document.getElementById("phaser_game").offsetWidth;
@@ -11,7 +21,7 @@ var config = {
   physics: {
     default: "arcade",
     arcade: {
-      gravity: { y: 200 },
+      gravity: { y: base_gravity },
       debug: false
     }
   },
@@ -44,10 +54,11 @@ function create() {
   //
   //Ground platform
   platform = this.physics.add.staticGroup();
-  platform
+  base_platform = platform
     .create(0, game_height - 32, "platform")
     .setScale(8, 2)
     .refreshBody();
+  // base_platform.setFrictionX(100);
   //
   //Blocks
   // 34x34 size >> 34x126
@@ -73,6 +84,11 @@ function create() {
       "block"
     )
     .setScale(1, 3);
+  blocks.getChildren().forEach(function(block) {
+    block.setMass(50);
+    block.setBounce(0);
+    block.setFrictionX(100);
+  });
   //
   // Canon stand
   canon_stand = this.physics.add.staticGroup();
@@ -94,6 +110,8 @@ function create() {
   //
   // Canon ball
   canon_ball = this.physics.add.sprite(game_width, game_height, "canon_ball");
+  canon_ball.setFrictionX(1000);
+  canon_ball.setMass(1);
   //
   //
   canon.body.setAllowGravity(false);
@@ -108,6 +126,11 @@ function create() {
 }
 
 function update() {
+  button = document.getElementById("submit_button");
+  button.addEventListener("click", function() {
+    getValues();
+    this.scene.restart();
+  });
   if (Phaser.Input.Keyboard.JustDown(spacebar)) {
     alert("lol");
   }
@@ -125,7 +148,7 @@ function update() {
       canon_ball.x = game_width - 0.86 * game_width;
       canon_ball.y = game_height - 0.25 * game_height;
 
-      this.physics.moveTo(canon_ball, pointer.x, pointer.y, 500);
+      this.physics.moveTo(canon_ball, pointer.x, pointer.y, start_velocity);
     },
     this
   );
