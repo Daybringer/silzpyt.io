@@ -197,6 +197,10 @@ button.block {
   padding: 2rem;
 }
 
+.category:hover {
+  cursor: pointer;
+}
+
 #phaser_game {
   height: 100vh;
 }

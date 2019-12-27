@@ -204,6 +204,9 @@ button {
   text-align: center;
   padding: 2rem;
 }
+.category:hover {
+  cursor: pointer;
+}
 //
 // Game
 #phaser_game {

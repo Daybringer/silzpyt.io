@@ -77,6 +77,9 @@
         }
       });
     </script>
+    <!-- Making animatied selections -->
+    <script src="./snap.svg-min.js"></script>
+    <script src="./animations.js"></script>
   </head>
 
   <body>
@@ -470,22 +473,16 @@
     <!-- Content selection -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid category_img" src="border1.png" />
-        </div>
-        <div class="col-md-6 col-sm-12 category">
-          <a href="./mechanics/mechanics.html"
-            ><img class="img-fluid category_img" src="border.png"
-          /></a>
-        </div>
+        <div class="col-md-6 col-sm-12 category" id="optics"></div>
+        <div
+          class="col-md-6 col-sm-12 category"
+          id="mechanics"
+          onclick="window.location = './mechanics/mechanics.html'"
+        ></div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid category_img" src="border1.png" />
-        </div>
-        <div class="col-md-6 col-sm-12 category">
-          <img class="img-fluid category_img" src="border1.png" />
-        </div>
+        <div class="col-md-6 col-sm-12 category " id="electromagnetism"></div>
+        <div class="col-md-6 col-sm-12 category" id="thermics"></div>
       </div>
     </div>
     <!-- Footer wave -->
