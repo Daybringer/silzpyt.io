@@ -30,11 +30,7 @@ a {
 
     &:hover {
       font-size: 1rem;
-      background: -webkit-linear-gradient(
-        right,
-        $gradient_hell,
-        $gradient_dunkel
-      );
+      background: -webkit-linear-gradient(right, $gradient_hell, $gradient_dunkel);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -53,11 +49,7 @@ a {
 // Buttons
 button {
   &.mainStyle {
-    background: -webkit-linear-gradient(
-      right,
-      $gradient_hell,
-      $gradient_dunkel
-    );
+    background: -webkit-linear-gradient(right, $gradient_hell, $gradient_dunkel);
     color: $coal_black;
     border-radius: 50px;
     font-size: 1.25rem;
@@ -102,11 +94,7 @@ button {
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: -webkit-linear-gradient(
-    right,
-    $gradient_hell,
-    $gradient_dunkel
-  ); /* Green background */
+  background: -webkit-linear-gradient(right, $gradient_hell, $gradient_dunkel); /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
@@ -210,7 +198,7 @@ button {
 //
 // Game
 #phaser_game {
-  height: 100vh;
+  height: 70vh;
 }
 //
 // Footer
